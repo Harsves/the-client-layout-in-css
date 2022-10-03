@@ -6,7 +6,48 @@
     <title>Advanced Layout 5</title>
     <link rel="stylesheet" href="../style.css" />
     <style>
-      /* Doe hier jouw ding! */
+      body {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        '. . . . header .'
+        '. . . nav . . '
+        '. main main . . .'
+        '. . footer footer footer .';
+        row-gap: 10px;
+        column-gap: 10px;
+      }
+
+      header {
+        grid-area: header;
+        margin-top: 30px;
+        margin-left: -30px;
+        margin-bottom: -30px;
+        z-index: 3;
+      }
+
+      nav {
+        grid-area: nav;
+        grid-column: 3/5;
+        z-index: 2;
+        grid-area: nav;
+        grid-column: 3/5;
+        z-index: 2;
+       margin-top: -90px;
+       margin-bottom: 90px;
+      }
+
+      main {
+        grid-area: main;
+        grid-row: 2 /4;
+      }
+
+      footer {
+        grid-area: footer;
+        margin-top: -90px;
+        margin-bottom: 90px;
+      }
     </style>
   </head>
   <body id="advanced-layout-5">
