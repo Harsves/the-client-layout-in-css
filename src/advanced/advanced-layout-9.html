@@ -6,7 +6,43 @@
     <title>Advanced Layout 9</title>
     <link rel="stylesheet" href="../style.css" />
     <style>
-      /* Doe hier jouw ding! */
+      body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 8fr 10fr 8fr;
+        grid-template-areas: 
+        '. header nav .'
+        '. main main .'
+        '. footer . .';
+        column-gap: 10px;
+      }
+
+      header {
+        grid-area: header;
+        clip-path: circle(25% at 50% 50%);
+        z-index: 2;
+        transform: translate(0px, 140px);
+      }
+
+      nav {
+        grid-area: nav;
+        clip-path: circle(40% at 50% 50%);
+        z-index: 0;
+        transform: translate(0px, 180px);
+      }
+
+      main {
+        grid-area: main;
+        clip-path: circle(40% at 50% 50%);
+        z-index: 1;
+      }
+
+      footer {
+        grid-area: footer;
+        clip-path: circle(40% at 50% 50%);
+        z-index: 2;
+        transform: translate(0px, -160px);
+      }
     </style>
   </head>
   <body id="advanced-layout-9">
